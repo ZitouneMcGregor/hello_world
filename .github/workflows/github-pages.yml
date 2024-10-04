@@ -1,5 +1,6 @@
 name: Deploy to GitHub Pages
 
+# Ce workflow se déclenche à chaque push sur la branche main
 on:
   push:
     branches:
@@ -12,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -24,9 +25,6 @@ jobs:
 
     - name: Build Angular project
       run: npm run build -- --output-path=docs --base-href='/your-repo-name/'
-
-    - name: Add .nojekyll file
-      run: touch docs/.nojekyll
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
