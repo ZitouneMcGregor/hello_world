@@ -1,0 +1,27 @@
+// Variables pour les images
+$pattern-image: url('../assets/coeur.jpeg'); // Chemin relatif vers votre image de pattern
+$center-image: url('../assets/simon.png'); // Chemin relatif vers l'image centrale
+
+// Style pour le conteneur avec le pattern en fond
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh; // Prend toute la hauteur de l'écran
+    background-image: $pattern-image;
+    background-size: 100px 100px; // Taille du pattern
+    background-repeat: repeat; // Répéter le motif en fond
+    display: flex;
+    justify-content: center; // Centre horizontalement
+    align-items: center; // Centre verticalement
+  }
+  
+  // Style pour l'image centrale
+  .centered-image {
+    width: 500px; // Taille de l'image centrale
+    height: 500px; // Taille carrée de l'image
+    background-image: $center-image; // Utilisation de l'image centrale
+    background-size: cover; // Couvre toute la taille de l'élément
+    background-position: center; // Centre l'image dans le cadre
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); // Ajout d'une ombre portée
+    border-radius: 10px; // Arrondi des coins de l'image
+  }
